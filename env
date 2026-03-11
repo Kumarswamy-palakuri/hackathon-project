@@ -1,0 +1,20 @@
+# =============================================
+# JobReady AI - Environment Configuration
+# =============================================
+# Fill in your API keys below:
+
+# Groq API
+GROQ_API_KEY=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
+
+# GitHub Personal Access Token (Free: GitHub → Settings → Developer Settings → Tokens)
+# Required scopes: read:user, public_repo
+GITHUB_TOKEN=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
+
+# NewsAPI (Free at: https://newsapi.org)
+NEWS_API_KEY=your_news_api_key_here
+
+# Flask Secret Key (can be any long random string)
+SECRET_KEY=jobready-ai-super-secret-key-2026-change-this
+
+# Database
+DATABASE_URL=sqlite:///jobready.db
