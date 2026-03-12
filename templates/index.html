@@ -15,20 +15,20 @@
                 extend: {
                     colors: {
                         neon: {
-                            blue: '#00f3ff',
-                            pink: '#ff00ff',
-                            green: '#39ff14',
-                            purple: '#bc13fe',
-                            yellow: '#fff01f',
-                            orange: '#ff5e00',
-                            cyan: '#00ffff'
+                            blue: '#3b82f6',      // softer blue
+                            pink: '#ec4899',      // modern pink
+                            green: '#10b981',     // emerald
+                            purple: '#8b5cf6',    // violet
+                            yellow: '#f59e0b',    // amber
+                            orange: '#f97316',    // orange
+                            cyan: '#06b6d4'       // cyan
                         },
                         dark: {
-                            bg: '#000000',
-                            card: '#0a0a0a',
-                            surface: '#111111',
-                            border: '#222222',
-                            hover: '#1a1a1a'
+                            bg: '#0a0a0a',
+                            card: '#111827',
+                            surface: '#1f2937',
+                            border: '#374151',
+                            hover: '#2d3748'
                         }
                     },
                     animation: {
@@ -73,12 +73,12 @@
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap');
 
         body {
-            font-family: 'Rajdhani', sans-serif;
-            background-color: #000000;
-            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #f3f4f6;
             overflow-x: hidden;
         }
 
@@ -87,21 +87,21 @@
         }
 
         .neon-text {
-            text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor;
+            text-shadow: 0 0 8px currentColor, 0 0 16px currentColor, 0 0 24px currentColor;
         }
 
         .neon-border {
-            box-shadow: 0 0 10px rgba(0, 243, 255, 0.3), inset 0 0 10px rgba(0, 243, 255, 0.1);
+            box-shadow: 0 0 8px rgba(59, 130, 246, 0.3), inset 0 0 8px rgba(59, 130, 246, 0.1);
         }
 
         .glass-panel {
-            background: rgba(10, 10, 10, 0.9);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .gradient-text {
-            background: linear-gradient(135deg, #00f3ff 0%, #bc13fe 50%, #ff00ff 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -109,14 +109,14 @@
 
         .grid-bg {
             background-image:
-                linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+                linear-gradient(rgba(59, 130, 246, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.02) 1px, transparent 1px);
             background-size: 40px 40px;
         }
 
         .skill-bar-fill {
             transition: width 1.8s cubic-bezier(0.22, 1, 0.36, 1);
-            box-shadow: 0 0 8px currentColor, 0 0 16px currentColor;
+            box-shadow: 0 0 6px currentColor, 0 0 12px currentColor;
         }
 
         .chat-message {
@@ -124,7 +124,7 @@
         }
 
         .hover-glow:hover {
-            box-shadow: 0 0 30px rgba(0, 243, 255, 0.4), 0 0 60px rgba(0, 243, 255, 0.2);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 0 40px rgba(59, 130, 246, 0.2);
             transform: translateY(-3px);
             transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
         }
@@ -137,7 +137,7 @@
             left: -60%;
             width: 40%;
             height: 200%;
-            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.035), transparent);
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.02), transparent);
             transform: skewX(-20deg);
             animation: card-shine 7s ease-in-out infinite;
             pointer-events: none;
@@ -173,26 +173,26 @@
         }
 
         ::-webkit-scrollbar-track {
-            background: #000000;
+            background: #0a0a0a;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #00f3ff, #bc13fe);
+            background: linear-gradient(180deg, #3b82f6, #8b5cf6);
             border-radius: 3px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, #39ff14, #00f3ff);
+            background: linear-gradient(180deg, #10b981, #3b82f6);
         }
 
         .particle {
             position: absolute;
             width: 2px;
             height: 2px;
-            background: #00f3ff;
+            background: #3b82f6;
             border-radius: 50%;
             pointer-events: none;
-            box-shadow: 0 0 10px #00f3ff;
+            box-shadow: 0 0 8px #3b82f6;
         }
 
         .cyber-grid {
@@ -202,8 +202,8 @@
             width: 100%;
             height: 100%;
             background-image:
-                linear-gradient(rgba(0, 243, 255, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(188, 19, 254, 0.05) 1px, transparent 1px);
+                linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
             background-size: 50px 50px;
             pointer-events: none;
             z-index: 0;
@@ -215,11 +215,11 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background: linear-gradient(90deg, transparent, rgba(0, 243, 255, 0.5), transparent);
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
             animation: scan 8s linear infinite;
             pointer-events: none;
             z-index: 9999;
-            opacity: 0.3;
+            opacity: 0.2;
         }
 
         .hexagon {
@@ -242,14 +242,14 @@
 
         .glitch-text::before {
             left: 2px;
-            text-shadow: -2px 0 #ff00ff;
+            text-shadow: -2px 0 #ec4899;
             clip: rect(44px, 450px, 56px, 0);
             animation: glitch-anim 5s infinite linear alternate-reverse;
         }
 
         .glitch-text::after {
             left: -2px;
-            text-shadow: -2px 0 #00f3ff;
+            text-shadow: -2px 0 #3b82f6;
             clip: rect(44px, 450px, 56px, 0);
             animation: glitch-anim2 5s infinite linear alternate-reverse;
         }
@@ -319,7 +319,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
             transition: left 0.5s;
         }
 
@@ -328,12 +328,11 @@
         }
 
         .input-cyber:focus {
-            box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+            box-shadow: 0 0 16px rgba(59, 130, 246, 0.2);
         }
 
-        /* ── ENHANCED ANIMATIONS ─────────────────── */
+        /* ── ENHANCED ANIMATIONS (softer) ─────────────────── */
 
-        /* Neon pulse ring around icons */
         .neon-ring {
             position: relative;
         }
@@ -342,7 +341,7 @@
             position: absolute;
             inset: -8px;
             border-radius: 50%;
-            border: 1px solid rgba(0, 243, 255, 0.5);
+            border: 1px solid rgba(59, 130, 246, 0.4);
             animation: ringPulse 2.5s ease-out infinite;
         }
         .neon-ring::after {
@@ -350,15 +349,14 @@
             position: absolute;
             inset: -16px;
             border-radius: 50%;
-            border: 1px solid rgba(188, 19, 254, 0.3);
+            border: 1px solid rgba(139, 92, 246, 0.2);
             animation: ringPulse 2.5s ease-out infinite 0.7s;
         }
         @keyframes ringPulse {
-            0%   { transform: scale(0.9); opacity: 0.8; }
+            0%   { transform: scale(0.9); opacity: 0.6; }
             100% { transform: scale(1.4); opacity: 0; }
         }
 
-        /* Animated border-chase effect on cards */
         .border-chase {
             position: relative;
         }
@@ -369,9 +367,9 @@
             border-radius: inherit;
             padding: 1px;
             background: linear-gradient(135deg,
-                #00f3ff 0%, transparent 30%,
-                #bc13fe 60%, transparent 80%,
-                #ff00ff 100%);
+                #3b82f6 0%, transparent 30%,
+                #8b5cf6 60%, transparent 80%,
+                #ec4899 100%);
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor; mask-composite: exclude;
             animation: borderChase 4s linear infinite;
@@ -383,13 +381,12 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Floating neon data matrix text */
         .data-stream {
             position: fixed;
             top: -20px;
             font-family: 'Orbitron', monospace;
             font-size: 11px;
-            color: rgba(0, 243, 255, 0.12);
+            color: rgba(59, 130, 246, 0.08);
             writing-mode: vertical-rl;
             white-space: nowrap;
             animation: dataFall linear infinite;
@@ -400,14 +397,13 @@
         @keyframes dataFall {
             0%   { transform: translateY(-100%); opacity: 0; }
             5%   { opacity: 1; }
-            95%  { opacity: 0.8; }
+            95%  { opacity: 0.6; }
             100% { transform: translateY(110vh); opacity: 0; }
         }
 
-        /* Text shimmer animation */
         .text-shimmer {
             background: linear-gradient(90deg,
-                #00f3ff 0%, #bc13fe 25%, #ff00ff 50%, #39ff14 75%, #00f3ff 100%);
+                #3b82f6 0%, #8b5cf6 25%, #ec4899 50%, #10b981 75%, #3b82f6 100%);
             background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -418,7 +414,6 @@
             to { background-position: 200% center; }
         }
 
-        /* Card entrance animation */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
@@ -433,40 +428,36 @@
         .reveal-delay-400 { transition-delay: 0.4s; }
         .reveal-delay-600 { transition-delay: 0.6s; }
 
-        /* Hover lift with neon glow */
         .hover-lift {
             transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
                         box-shadow 0.35s ease;
         }
         .hover-lift:hover {
             transform: translateY(-6px);
-            box-shadow: 0 20px 40px rgba(0, 243, 255, 0.1),
-                        0 0 0 1px rgba(0, 243, 255, 0.15);
+            box-shadow: 0 20px 30px -10px rgba(59, 130, 246, 0.2),
+                        0 0 0 1px rgba(59, 130, 246, 0.1);
         }
 
-        /* Neon number counter glow */
         .stat-number {
             font-family: 'Orbitron', sans-serif;
             animation: numberGlow 3s ease-in-out infinite alternate;
         }
         @keyframes numberGlow {
-            from { text-shadow: 0 0 10px rgba(0, 243, 255, 0.5); }
-            to   { text-shadow: 0 0 30px rgba(0, 243, 255, 0.9), 0 0 60px rgba(0, 243, 255, 0.4); }
+            from { text-shadow: 0 0 8px rgba(59, 130, 246, 0.4); }
+            to   { text-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.3); }
         }
 
-        /* History card transitions */
         .history-card {
             transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
             border-left: 2px solid transparent;
         }
         .history-card:hover {
-            border-left-color: #00f3ff;
+            border-left-color: #3b82f6;
             transform: translateX(6px);
-            box-shadow: -4px 0 20px rgba(0, 243, 255, 0.15),
-                        0 0 40px rgba(0, 0, 0, 0.4);
+            box-shadow: -4px 0 16px rgba(59, 130, 246, 0.1),
+                        0 0 30px rgba(0, 0, 0, 0.4);
         }
 
-        /* Score badge animation */
         .score-badge {
             position: relative;
             overflow: hidden;
@@ -476,7 +467,7 @@
             position: absolute;
             top: -50%; left: -60%;
             width: 40%; height: 200%;
-            background: linear-gradient(to right, transparent, rgba(255,255,255,0.15), transparent);
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent);
             transform: skewX(-20deg);
             animation: badgeShimmer 3s ease-in-out infinite;
         }
@@ -487,16 +478,14 @@
             70%      { left: 130%; opacity: 0; }
         }
 
-        /* Pulsing dot indicator */
         .pulse-dot {
             animation: pulseDot 1.5s ease-in-out infinite;
         }
         @keyframes pulseDot {
             0%, 100% { transform: scale(1); opacity: 1; }
-            50%       { transform: scale(1.5); opacity: 0.6; }
+            50%       { transform: scale(1.5); opacity: 0.5; }
         }
 
-        /* Neon underline hover */
         .neon-underline {
             position: relative;
         }
@@ -505,13 +494,12 @@
             position: absolute;
             bottom: -2px; left: 0;
             width: 0; height: 1px;
-            background: linear-gradient(90deg, #00f3ff, #bc13fe);
-            box-shadow: 0 0 8px rgba(0, 243, 255, 0.8);
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            box-shadow: 0 0 6px rgba(59, 130, 246, 0.6);
             transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .neon-underline:hover::after { width: 100%; }
 
-        /* Enhanced button cyber */
         .btn-cyber-enhanced {
             position: relative;
         }
@@ -522,13 +510,12 @@
             transform: translateX(-50%);
             width: 0; height: 2px;
             background: currentColor;
-            box-shadow: 0 0 10px currentColor;
+            box-shadow: 0 0 8px currentColor;
             transition: width 0.4s ease;
             filter: blur(1px);
         }
         .btn-cyber-enhanced:hover::after { width: 100%; }
 
-        /* Animated gradient background for sections */
         .section-glow {
             position: relative;
         }
@@ -537,11 +524,10 @@
             position: absolute;
             inset: 0;
             background: radial-gradient(ellipse 60% 40% at 50% 50%,
-                rgba(0, 243, 255, 0.03) 0%, transparent 70%);
+                rgba(59, 130, 246, 0.02) 0%, transparent 70%);
             pointer-events: none;
         }
 
-        /* Timeline connector for history */
         .timeline-connector {
             position: relative;
             padding-left: 24px;
@@ -552,9 +538,9 @@
             left: 0; top: 0; bottom: 0;
             width: 1px;
             background: linear-gradient(to bottom,
-                rgba(0, 243, 255, 0.5) 0%,
-                rgba(188, 19, 254, 0.3) 50%,
-                rgba(255, 0, 255, 0.1) 100%);
+                rgba(59, 130, 246, 0.4) 0%,
+                rgba(139, 92, 246, 0.2) 50%,
+                rgba(236, 72, 153, 0.1) 100%);
         }
         .timeline-connector::after {
             content: '';
@@ -562,11 +548,10 @@
             left: -4px; top: 12px;
             width: 9px; height: 9px;
             border-radius: 50%;
-            background: #00f3ff;
-            box-shadow: 0 0 10px #00f3ff, 0 0 20px rgba(0, 243, 255, 0.5);
+            background: #3b82f6;
+            box-shadow: 0 0 8px #3b82f6, 0 0 16px rgba(59, 130, 246, 0.4);
         }
 
-        /* Holo card effect */
         .holo-card {
             position: relative;
             overflow: hidden;
@@ -578,8 +563,8 @@
             width: 50%; height: 100%;
             background: linear-gradient(120deg,
                 transparent 0%,
-                rgba(0, 243, 255, 0.04) 40%,
-                rgba(188, 19, 254, 0.04) 60%,
+                rgba(59, 130, 246, 0.02) 40%,
+                rgba(139, 92, 246, 0.02) 60%,
                 transparent 100%);
             animation: holoSweep 8s ease-in-out infinite;
         }
@@ -590,16 +575,14 @@
             100% { left: 150%; }
         }
 
-        /* History empty state animation */
         .empty-pulse {
             animation: emptyPulse 2s ease-in-out infinite;
         }
         @keyframes emptyPulse {
-            0%,100% { opacity: 0.4; transform: scale(1); }
-            50%      { opacity: 0.7; transform: scale(1.05); }
+            0%,100% { opacity: 0.3; transform: scale(1); }
+            50%      { opacity: 0.6; transform: scale(1.02); }
         }
 
-        /* Fade in up for history items */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(20px); }
             to   { opacity: 1; transform: translateY(0); }
@@ -617,14 +600,14 @@
     <div class="cyber-grid relative z-0"></div>
     <div class="scan-line relative z-50"></div>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-panel border-b border-white/10">
+    <!-- Navigation (unchanged structure) -->
+    <nav class="fixed w-full z-50 glass-panel border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center space-x-3">
                     <div class="relative">
                         <i class="fas fa-atom text-neon-blue text-3xl animate-pulse-slow"></i>
-                        <div class="absolute inset-0 bg-neon-blue blur-xl opacity-50 animate-pulse-slow"></div>
+                        <div class="absolute inset-0 bg-neon-blue blur-xl opacity-30 animate-pulse-slow"></div>
                     </div>
                     <span class="font-cyber text-2xl font-black gradient-text tracking-wider">JobReady AI</span>
                 </div>
@@ -638,7 +621,7 @@
                     <a href="#assistant"
                         class="neon-underline text-gray-400 hover:text-neon-green transition-all duration-300 font-semibold tracking-wide">AI COACH</a>
                     <a href="{{ url_for('logout') }}"
-                        class="text-neon-pink hover:text-white transition-all duration-300 font-bold tracking-wide shadow-[0_0_10px_rgba(255,0,255,0.2)] border border-neon-pink px-4 py-1">LOGOUT</a>
+                        class="text-neon-pink hover:text-white transition-all duration-300 font-bold tracking-wide shadow-[0_0_10px_rgba(236,72,153,0.2)] border border-neon-pink px-4 py-1">LOGOUT</a>
                 </div>
                 <button onclick="toggleChat()"
                     class="md:hidden text-neon-blue text-2xl hover:scale-110 transition-transform">
@@ -651,9 +634,9 @@
     <!-- Hero Section -->
     <section class="relative pt-40 pb-32 px-4 overflow-hidden">
         <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-20 left-10 w-96 h-96 bg-neon-blue/10 rounded-full blur-3xl animate-pulse-slow">
+            <div class="absolute top-20 left-10 w-96 h-96 bg-neon-blue/5 rounded-full blur-3xl animate-pulse-slow">
             </div>
-            <div class="absolute bottom-20 right-10 w-[500px] h-[500px] bg-neon-pink/10 rounded-full blur-3xl animate-pulse-slow"
+            <div class="absolute bottom-20 right-10 w-[500px] h-[500px] bg-neon-pink/5 rounded-full blur-3xl animate-pulse-slow"
                 style="animation-delay: 2s;"></div>
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-neon-purple/5 rounded-full blur-3xl animate-pulse-slow"
                 style="animation-delay: 4s;"></div>
@@ -671,27 +654,27 @@
                 <span class="block text-white mb-2 glitch-text" data-text="ARE YOU">ARE YOU</span>
                 <span class="text-shimmer neon-text">JOB READY?</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-500 mb-16 max-w-3xl mx-auto leading-relaxed font-light">
+            <p class="text-xl md:text-2xl text-gray-400 mb-16 max-w-3xl mx-auto leading-relaxed font-light">
                 Upload your resume, connect your profiles, and let our neural network analyze your industry readiness.
                 <span class="text-neon-blue">Get personalized skill recommendations.</span>
             </p>
             <div class="flex flex-col sm:flex-row gap-6 justify-center reveal reveal-delay-400">
                 <button onclick="scrollToAnalyzer()"
-                    class="group relative px-10 py-5 bg-transparent border-2 border-neon-blue text-neon-blue font-bold rounded-none overflow-hidden hover-glow btn-cyber btn-cyber-enhanced font-cyber tracking-wider">
+                    class="group relative px-10 py-5 bg-transparent border-2 border-neon-blue text-neon-blue font-bold rounded-md overflow-hidden hover-glow btn-cyber btn-cyber-enhanced font-cyber tracking-wider">
                     <span class="relative z-10 flex items-center gap-3">
                         <i class="fas fa-rocket"></i> INITIATE ANALYSIS
                     </span>
                     <div
-                        class="absolute inset-0 bg-neon-blue/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500">
+                        class="absolute inset-0 bg-neon-blue/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500">
                     </div>
                 </button>
                 <button onclick="toggleChat()"
-                    class="group relative px-10 py-5 bg-neon-purple/10 border-2 border-neon-purple text-neon-purple font-bold rounded-none overflow-hidden hover-glow btn-cyber btn-cyber-enhanced font-cyber tracking-wider">
+                    class="group relative px-10 py-5 bg-neon-purple/10 border-2 border-neon-purple text-neon-purple font-bold rounded-md overflow-hidden hover-glow btn-cyber btn-cyber-enhanced font-cyber tracking-wider">
                     <span class="relative z-10 flex items-center gap-3">
                         <i class="fas fa-comments"></i> AI COACH
                     </span>
                     <div
-                        class="absolute inset-0 bg-neon-purple/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500">
+                        class="absolute inset-0 bg-neon-purple/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500">
                     </div>
                 </button>
             </div>
@@ -708,29 +691,29 @@
         </div>
     </section>
 
-    <!-- Main Analyzer Section -->
+    <!-- Main Analyzer Section (unchanged structure, only visual) -->
     <section id="analyzer" class="py-24 px-4 relative reveal">
         <div class="max-w-6xl mx-auto relative z-10">
             <div
-                class="glass-panel rounded-none p-10 md:p-16 border border-white/10 shadow-2xl relative overflow-hidden holo-card">
+                class="glass-panel rounded-xl p-10 md:p-16 border border-white/5 shadow-2xl relative overflow-hidden holo-card">
                 <div
                     class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink">
                 </div>
-                <div class="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-neon-blue/30"></div>
-                <div class="absolute bottom-0 left-0 w-32 h-32 border-b-2 border-l-2 border-neon-pink/30"></div>
+                <div class="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-neon-blue/20"></div>
+                <div class="absolute bottom-0 left-0 w-32 h-32 border-b-2 border-l-2 border-neon-pink/20"></div>
 
                 <div class="text-center mb-16">
                     <h2 class="font-cyber text-4xl md:text-5xl font-bold mb-4 text-white tracking-wider">
                         <i class="fas fa-microchip text-neon-blue mr-4 animate-pulse"></i>
                         RESUME ANALYZER
                     </h2>
-                    <p class="text-gray-500 font-light tracking-wide">UPLOAD YOUR RESUME AND CONNECT PROFESSIONAL
+                    <p class="text-gray-400 font-light tracking-wide">UPLOAD YOUR RESUME AND CONNECT PROFESSIONAL
                         PROFILES</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-10 mb-12">
                     <!-- Resume Upload -->
-                    <div class="border-2 border-dashed border-white/20 rounded-none p-10 text-center hover:border-neon-blue transition-all duration-500 group cursor-pointer relative overflow-hidden bg-dark-surface/50"
+                    <div class="border-2 border-dashed border-white/10 rounded-xl p-10 text-center hover:border-neon-blue transition-all duration-500 group cursor-pointer relative overflow-hidden bg-dark-surface/50"
                         onclick="document.getElementById('resumeInput').click()">
                         <input type="file" id="resumeInput" class="hidden" accept=".pdf,.doc,.docx"
                             onchange="handleFileUpload(this)">
@@ -740,14 +723,14 @@
                         <div
                             class="text-7xl mb-6 group-hover:scale-110 transition-transform duration-500 relative z-10">
                             <i
-                                class="fas fa-cloud-upload-alt text-neon-blue drop-shadow-[0_0_15px_rgba(0,243,255,0.5)]"></i>
+                                class="fas fa-cloud-upload-alt text-neon-blue drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]"></i>
                         </div>
                         <h3 class="text-2xl font-bold mb-3 text-white font-cyber tracking-wider relative z-10">UPLOAD
                             RESUME</h3>
                         <p class="text-gray-500 text-sm mb-6 relative z-10">PDF, DOC, OR DOCX (MAX 5MB)</p>
                         <div id="uploadStatus" class="hidden relative z-10">
                             <i
-                                class="fas fa-check-circle text-neon-green text-3xl drop-shadow-[0_0_10px_rgba(57,255,20,0.8)]"></i>
+                                class="fas fa-check-circle text-neon-green text-3xl drop-shadow-[0_0_10px_rgba(16,185,129,0.6)]"></i>
                             <p class="text-neon-green mt-3 font-cyber tracking-wider">UPLOAD SUCCESSFUL</p>
                         </div>
                     </div>
@@ -756,9 +739,9 @@
                     <div class="space-y-6">
                         <div class="relative group">
                             <i
-                                class="fab fa-github absolute left-5 top-5 text-gray-600 text-xl group-focus-within:text-neon-green transition-colors"></i>
+                                class="fab fa-github absolute left-5 top-5 text-gray-500 text-xl group-focus-within:text-neon-green transition-colors"></i>
                             <input type="url" id="githubUrl" placeholder="GITHUB PROFILE URL"
-                                class="w-full bg-dark-surface border border-white/10 rounded-none py-4 pl-14 pr-4 text-white placeholder-gray-600 focus:border-neon-green focus:outline-none focus:ring-1 focus:ring-neon-green transition-all font-cyber tracking-wider input-cyber"
+                                class="w-full bg-dark-surface border border-white/10 rounded-lg py-4 pl-14 pr-4 text-white placeholder-gray-600 focus:border-neon-green focus:outline-none focus:ring-1 focus:ring-neon-green transition-all font-cyber tracking-wider input-cyber"
                                 onchange="validateUrl(this, 'github')">
                             <span id="githubStatus" class="absolute right-5 top-5 hidden text-neon-green">
                                 <i class="fas fa-check"></i>
@@ -767,9 +750,9 @@
 
                         <div class="relative group">
                             <i
-                                class="fab fa-linkedin absolute left-5 top-5 text-gray-600 text-xl group-focus-within:text-neon-blue transition-colors"></i>
+                                class="fab fa-linkedin absolute left-5 top-5 text-gray-500 text-xl group-focus-within:text-neon-blue transition-colors"></i>
                             <input type="url" id="linkedinUrl" placeholder="LINKEDIN PROFILE URL"
-                                class="w-full bg-dark-surface border border-white/10 rounded-none py-4 pl-14 pr-4 text-white placeholder-gray-600 focus:border-neon-blue focus:outline-none focus:ring-1 focus:ring-neon-blue transition-all font-cyber tracking-wider input-cyber"
+                                class="w-full bg-dark-surface border border-white/10 rounded-lg py-4 pl-14 pr-4 text-white placeholder-gray-600 focus:border-neon-blue focus:outline-none focus:ring-1 focus:ring-neon-blue transition-all font-cyber tracking-wider input-cyber"
                                 onchange="validateUrl(this, 'linkedin')">
                             <span id="linkedinStatus" class="absolute right-5 top-5 hidden text-neon-green">
                                 <i class="fas fa-check"></i>
@@ -778,9 +761,9 @@
 
                         <div class="relative group">
                             <i
-                                class="fas fa-briefcase absolute left-5 top-5 text-gray-600 text-xl group-focus-within:text-neon-pink transition-colors"></i>
+                                class="fas fa-briefcase absolute left-5 top-5 text-gray-500 text-xl group-focus-within:text-neon-pink transition-colors"></i>
                             <select id="jobRole"
-                                class="w-full bg-dark-surface border border-white/10 rounded-none py-4 pl-14 pr-4 text-white focus:border-neon-pink focus:outline-none focus:ring-1 focus:ring-neon-pink transition-all appearance-none cursor-pointer font-cyber tracking-wider input-cyber">
+                                class="w-full bg-dark-surface border border-white/10 rounded-lg py-4 pl-14 pr-4 text-white focus:border-neon-pink focus:outline-none focus:ring-1 focus:ring-neon-pink transition-all appearance-none cursor-pointer font-cyber tracking-wider input-cyber">
                                 <option value="">SELECT TARGET JOB ROLE</option>
                                 <option value="frontend">FRONTEND DEVELOPER</option>
                                 <option value="backend">BACKEND DEVELOPER</option>
@@ -796,7 +779,7 @@
 
                 <div class="mb-10 text-center">
                     <button onclick="openPersonalityTest()" id="personalityBtn"
-                        class="w-full py-4 bg-dark-surface border border-neon-yellow/50 text-neon-yellow font-bold text-lg rounded-none hover:bg-neon-yellow/10 transition-all font-cyber tracking-widest btn-cyber relative overflow-hidden mb-4 shadow-[0_0_15px_rgba(255,240,31,0.2)]">
+                        class="w-full py-4 bg-dark-surface border border-neon-yellow/50 text-neon-yellow font-bold text-lg rounded-lg hover:bg-neon-yellow/10 transition-all font-cyber tracking-widest btn-cyber relative overflow-hidden mb-4 shadow-[0_0_15px_rgba(245,158,11,0.1)]">
                         <i class="fas fa-fingerprint text-xl mr-2"></i>
                         <span>ASSESS PERSONALITY</span>
                     </button>
@@ -805,7 +788,7 @@
                 </div>
 
                 <button onclick="analyzeResume()" id="analyzeBtn"
-                    class="w-full py-5 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink text-black font-bold text-lg rounded-none hover:opacity-90 transition-all shadow-[0_0_30px_rgba(0,243,255,0.3)] flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed font-cyber tracking-widest btn-cyber relative overflow-hidden">
+                    class="w-full py-5 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink text-white font-bold text-lg rounded-lg hover:opacity-90 transition-all shadow-[0_0_20px_rgba(59,130,246,0.2)] flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed font-cyber tracking-widest btn-cyber relative overflow-hidden">
                     <i class="fas fa-brain text-xl"></i>
                     <span>ANALYZE PROFILE</span>
                 </button>
@@ -816,10 +799,10 @@
                     <div class="text-center relative">
                         <div class="inline-block relative">
                             <svg class="w-48 h-48 transform -rotate-90">
-                                <circle cx="96" cy="96" r="88" stroke="#111" stroke-width="8" fill="none"></circle>
-                                <circle id="scoreCircle" cx="96" cy="96" r="88" stroke="#00f3ff" stroke-width="8"
+                                <circle cx="96" cy="96" r="88" stroke="#1f2937" stroke-width="8" fill="none"></circle>
+                                <circle id="scoreCircle" cx="96" cy="96" r="88" stroke="#3b82f6" stroke-width="8"
                                     fill="none" stroke-dasharray="552" stroke-dashoffset="552" stroke-linecap="square"
-                                    class="transition-all duration-1000 drop-shadow-[0_0_10px_rgba(0,243,255,0.5)]">
+                                    class="transition-all duration-1000 drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]">
                                 </circle>
                             </svg>
                             <div class="absolute inset-0 flex flex-col items-center justify-center">
@@ -833,7 +816,7 @@
                         <!-- PDF Export Button -->
                         <div class="mt-6" id="exportBtnContainer" style="display:none">
                             <button onclick="exportToPDF()" id="exportPdfBtn"
-                                class="px-8 py-3 bg-transparent border-2 border-neon-purple text-neon-purple font-bold rounded-none hover:bg-neon-purple hover:text-black transition-all font-cyber tracking-wider btn-cyber relative overflow-hidden shadow-[0_0_15px_rgba(188,19,254,0.3)] hover:shadow-[0_0_30px_rgba(188,19,254,0.6)]">
+                                class="px-8 py-3 bg-transparent border-2 border-neon-purple text-neon-purple font-bold rounded-lg hover:bg-neon-purple hover:text-white transition-all font-cyber tracking-wider btn-cyber relative overflow-hidden shadow-[0_0_15px_rgba(139,92,246,0.2)] hover:shadow-[0_0_30px_rgba(139,92,246,0.4)]">
                                 <span class="relative z-10 flex items-center gap-2">
                                     <i class="fas fa-file-pdf text-xl"></i> EXPORT REPORT PDF
                                 </span>
@@ -844,7 +827,7 @@
                     <!-- Skills Breakdown -->
                     <div class="grid md:grid-cols-2 gap-8">
                         <div
-                            class="bg-dark-surface border border-white/10 rounded-none p-8 relative overflow-hidden group hover:border-neon-blue/50 transition-colors">
+                            class="bg-dark-surface border border-white/10 rounded-xl p-8 relative overflow-hidden group hover:border-neon-blue/50 transition-colors">
                             <div class="absolute top-0 left-0 w-1 h-full bg-neon-blue"></div>
                             <h4
                                 class="font-cyber text-xl font-bold mb-6 text-neon-blue flex items-center gap-3 tracking-wider">
@@ -856,7 +839,7 @@
                         </div>
 
                         <div
-                            class="bg-dark-surface border border-white/10 rounded-none p-8 relative overflow-hidden group hover:border-neon-pink/50 transition-colors">
+                            class="bg-dark-surface border border-white/10 rounded-xl p-8 relative overflow-hidden group hover:border-neon-pink/50 transition-colors">
                             <div class="absolute top-0 left-0 w-1 h-full bg-neon-pink"></div>
                             <h4
                                 class="font-cyber text-xl font-bold mb-6 text-neon-pink flex items-center gap-3 tracking-wider">
@@ -869,7 +852,7 @@
                     </div>
 
                     <!-- Improvement Suggestions -->
-                    <div class="bg-dark-surface border border-white/10 rounded-none p-8 relative overflow-hidden group hover:border-neon-yellow/50 transition-colors">
+                    <div class="bg-dark-surface border border-white/10 rounded-xl p-8 relative overflow-hidden group hover:border-neon-yellow/50 transition-colors">
                         <div class="absolute top-0 left-0 w-1 h-full bg-neon-yellow"></div>
                         <h4 class="font-cyber text-xl font-bold mb-6 text-neon-yellow flex items-center gap-3 tracking-wider">
                             <i class="fas fa-lightbulb"></i> RECOMMENDED IMPROVEMENTS
@@ -878,7 +861,7 @@
                     </div>
 
                     <!-- Course Recommendations (Dynamic) -->
-                    <div id="courseRecommendations" class="hidden bg-dark-surface border border-white/10 rounded-none p-8 relative overflow-hidden hover:border-neon-blue/50 transition-colors">
+                    <div id="courseRecommendations" class="hidden bg-dark-surface border border-white/10 rounded-xl p-8 relative overflow-hidden hover:border-neon-blue/50 transition-colors">
                         <div class="absolute top-0 left-0 w-1 h-full bg-neon-blue"></div>
                         <h4 class="font-cyber text-xl font-bold mb-6 text-neon-blue flex items-center gap-3 tracking-wider">
                             <i class="fas fa-graduation-cap"></i> AI-RECOMMENDED COURSES
@@ -899,13 +882,13 @@
                 <h2 class="font-cyber text-4xl md:text-5xl font-bold mb-4 tracking-wider">
                     <span class="text-shimmer">ANALYSIS HISTORY</span>
                 </h2>
-                <p class="text-gray-500 max-w-2xl mx-auto font-light tracking-wide reveal-delay-200">YOUR NEURAL PROFILE EVOLUTION — STORED IN SECURE DATABASE</p>
+                <p class="text-gray-400 max-w-2xl mx-auto font-light tracking-wide reveal-delay-200">YOUR NEURAL PROFILE EVOLUTION — STORED IN SECURE DATABASE</p>
             </div>
 
             <!-- History Controls -->
             <div class="flex justify-between items-center mb-8">
                 <div class="flex items-center gap-3">
-                    <span class="w-2 h-2 bg-neon-blue rounded-full pulse-dot shadow-[0_0_8px_#00f3ff]"></span>
+                    <span class="w-2 h-2 bg-neon-blue rounded-full pulse-dot shadow-[0_0_8px_#3b82f6]"></span>
                     <span class="text-gray-500 font-cyber text-xs tracking-widest" id="historyCount">LOADING...</span>
                 </div>
                 <button onclick="loadHistory()" class="px-4 py-2 border border-white/10 text-gray-500 text-xs font-cyber tracking-wider hover:border-neon-blue hover:text-neon-blue transition-all flex items-center gap-2">
@@ -916,47 +899,46 @@
             <!-- History List -->
             <div id="historyList" class="space-y-4">
                 <!-- Skeleton loaders -->
-                <div class="h-24 bg-dark-surface border border-white/5 animate-pulse rounded-none"></div>
-                <div class="h-24 bg-dark-surface border border-white/5 animate-pulse rounded-none" style="animation-delay:.15s"></div>
-                <div class="h-24 bg-dark-surface border border-white/5 animate-pulse rounded-none" style="animation-delay:.3s"></div>
+                <div class="h-24 bg-dark-surface border border-white/5 animate-pulse rounded-xl"></div>
+                <div class="h-24 bg-dark-surface border border-white/5 animate-pulse rounded-xl" style="animation-delay:.15s"></div>
+                <div class="h-24 bg-dark-surface border border-white/5 animate-pulse rounded-xl" style="animation-delay:.3s"></div>
             </div>
         </div>
     </section>
 
     <!-- Course Recommendations -->
-
     <section id="courses" class="py-24 px-4 bg-gradient-to-b from-transparent to-dark-surface/30 relative reveal">
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="text-center mb-20 reveal">
                 <h2 class="font-cyber text-4xl md:text-5xl font-bold mb-4 tracking-wider">
                     <span class="text-shimmer neon-text">RECOMMENDED COURSES</span>
                 </h2>
-                <p class="text-gray-500 max-w-2xl mx-auto font-light tracking-wide reveal reveal-delay-200">BRIDGE YOUR
+                <p class="text-gray-400 max-w-2xl mx-auto font-light tracking-wide reveal reveal-delay-200">BRIDGE YOUR
                     SKILL GAPS WITH THESE NEURAL-OPTIMIZED LEARNING PATHS</p>
             </div>
             <div id="coursesGrid" class="grid md:grid-cols-3 gap-8 reveal reveal-delay-300">
                 <!-- Course Card 1 -->
                 <div
-                    class="glass-panel rounded-none overflow-hidden hover-glow transition-all duration-500 group border border-white/10">
+                    class="glass-panel rounded-xl overflow-hidden hover-glow transition-all duration-500 group border border-white/5">
                     <div
                         class="h-56 bg-gradient-to-br from-neon-blue/10 to-neon-purple/10 flex items-center justify-center relative overflow-hidden">
                         <div
-                            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMCwgMjQzLCAyNTUsIDAuMSkiLz48L3N2Zz4=')] opacity-30">
+                            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoNTksIDEzMCwgMjQ2LCAwLjEpIi8+PC9zdmc+')] opacity-30">
                         </div>
                         <i
-                            class="fab fa-react text-7xl text-neon-blue group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_20px_rgba(0,243,255,0.5)]"></i>
+                            class="fab fa-react text-7xl text-neon-blue group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_20px_rgba(59,130,246,0.3)]"></i>
                         <div class="absolute inset-0 bg-gradient-to-t from-dark-card to-transparent"></div>
                     </div>
                     <div class="p-8">
                         <div class="flex justify-between items-start mb-4">
                             <span
-                                class="text-xs font-bold text-neon-blue border border-neon-blue/30 px-3 py-1 rounded-none font-cyber tracking-wider">ADVANCED</span>
+                                class="text-xs font-bold text-neon-blue border border-neon-blue/30 px-3 py-1 rounded-md font-cyber tracking-wider">ADVANCED</span>
                             <div class="flex text-neon-yellow text-sm">
-                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(255,240,31,0.5)]"></i>
-                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(255,240,31,0.5)]"></i>
-                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(255,240,31,0.5)]"></i>
-                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(255,240,31,0.5)]"></i>
-                                <i class="fas fa-star-half-alt drop-shadow-[0_0_5px_rgba(255,240,31,0.5)]"></i>
+                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(245,158,11,0.3)]"></i>
+                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(245,158,11,0.3)]"></i>
+                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(245,158,11,0.3)]"></i>
+                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(245,158,11,0.3)]"></i>
+                                <i class="fas fa-star-half-alt drop-shadow-[0_0_5px_rgba(245,158,11,0.3)]"></i>
                             </div>
                         </div>
                         <h3 class="font-bold text-2xl mb-3 text-white font-cyber tracking-wide">REACT & NEXT.JS MASTERY
@@ -966,7 +948,7 @@
                         <div class="flex items-center justify-between">
                             <span class="text-neon-green font-bold text-xl font-cyber">$49.99</span>
                             <button
-                                class="px-6 py-3 bg-neon-blue/10 border border-neon-blue text-neon-blue rounded-none hover:bg-neon-blue hover:text-black transition-all text-sm font-bold font-cyber tracking-wider btn-cyber">
+                                class="px-6 py-3 bg-neon-blue/10 border border-neon-blue text-neon-blue rounded-lg hover:bg-neon-blue hover:text-white transition-all text-sm font-bold font-cyber tracking-wider btn-cyber">
                                 ENROLL
                             </button>
                         </div>
@@ -975,26 +957,26 @@
 
                 <!-- Course Card 2 -->
                 <div
-                    class="glass-panel rounded-none overflow-hidden hover-glow transition-all duration-500 group border border-white/10">
+                    class="glass-panel rounded-xl overflow-hidden hover-glow transition-all duration-500 group border border-white/5">
                     <div
                         class="h-56 bg-gradient-to-br from-neon-green/10 to-neon-blue/10 flex items-center justify-center relative overflow-hidden">
                         <div
-                            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoNTcsIDI1NSwgMjAsIDAuMSkiLz48L3N2Zz4=')] opacity-30">
+                            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMTYsIDE4NSwgMTI5LCAwLjEpIi8+PC9zdmc+')] opacity-30">
                         </div>
                         <i
-                            class="fab fa-python text-7xl text-neon-green group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_20px_rgba(57,255,20,0.5)]"></i>
+                            class="fab fa-python text-7xl text-neon-green group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_20px_rgba(16,185,129,0.3)]"></i>
                         <div class="absolute inset-0 bg-gradient-to-t from-dark-card to-transparent"></div>
                     </div>
                     <div class="p-8">
                         <div class="flex justify-between items-start mb-4">
                             <span
-                                class="text-xs font-bold text-neon-green border border-neon-green/30 px-3 py-1 rounded-none font-cyber tracking-wider">INTERMEDIATE</span>
+                                class="text-xs font-bold text-neon-green border border-neon-green/30 px-3 py-1 rounded-md font-cyber tracking-wider">INTERMEDIATE</span>
                             <div class="flex text-neon-yellow text-sm">
-                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(255,240,31,0.5)]"></i>
-                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(255,240,31,0.5)]"></i>
-                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(255,240,31,0.5)]"></i>
-                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(255,240,31,0.5)]"></i>
-                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(255,240,31,0.5)]"></i>
+                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(245,158,11,0.3)]"></i>
+                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(245,158,11,0.3)]"></i>
+                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(245,158,11,0.3)]"></i>
+                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(245,158,11,0.3)]"></i>
+                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(245,158,11,0.3)]"></i>
                             </div>
                         </div>
                         <h3 class="font-bold text-2xl mb-3 text-white font-cyber tracking-wide">PYTHON FOR DATA SCIENCE
@@ -1004,7 +986,7 @@
                         <div class="flex items-center justify-between">
                             <span class="text-neon-green font-bold text-xl font-cyber">$59.99</span>
                             <button
-                                class="px-6 py-3 bg-neon-green/10 border border-neon-green text-neon-green rounded-none hover:bg-neon-green hover:text-black transition-all text-sm font-bold font-cyber tracking-wider btn-cyber">
+                                class="px-6 py-3 bg-neon-green/10 border border-neon-green text-neon-green rounded-lg hover:bg-neon-green hover:text-white transition-all text-sm font-bold font-cyber tracking-wider btn-cyber">
                                 ENROLL
                             </button>
                         </div>
@@ -1013,26 +995,26 @@
 
                 <!-- Course Card 3 -->
                 <div
-                    class="glass-panel rounded-none overflow-hidden hover-glow transition-all duration-500 group border border-white/10">
+                    class="glass-panel rounded-xl overflow-hidden hover-glow transition-all duration-500 group border border-white/5">
                     <div
                         class="h-56 bg-gradient-to-br from-neon-pink/10 to-neon-purple/10 flex items-center justify-center relative overflow-hidden">
                         <div
-                            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LCAwLCAyNTUsIDAuMSkiLz48L3N2Zz4=')] opacity-30">
+                            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjM2LCA3MiwgMTUzLCAwLjEpIi8+PC9zdmc+')] opacity-30">
                         </div>
                         <i
-                            class="fas fa-cloud text-7xl text-neon-pink group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_20px_rgba(255,0,255,0.5)]"></i>
+                            class="fas fa-cloud text-7xl text-neon-pink group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_20px_rgba(236,72,153,0.3)]"></i>
                         <div class="absolute inset-0 bg-gradient-to-t from-dark-card to-transparent"></div>
                     </div>
                     <div class="p-8">
                         <div class="flex justify-between items-start mb-4">
                             <span
-                                class="text-xs font-bold text-neon-pink border border-neon-pink/30 px-3 py-1 rounded-none font-cyber tracking-wider">BEGINNER</span>
+                                class="text-xs font-bold text-neon-pink border border-neon-pink/30 px-3 py-1 rounded-md font-cyber tracking-wider">BEGINNER</span>
                             <div class="flex text-neon-yellow text-sm">
-                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(255,240,31,0.5)]"></i>
-                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(255,240,31,0.5)]"></i>
-                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(255,240,31,0.5)]"></i>
-                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(255,240,31,0.5)]"></i>
-                                <i class="far fa-star text-gray-700"></i>
+                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(245,158,11,0.3)]"></i>
+                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(245,158,11,0.3)]"></i>
+                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(245,158,11,0.3)]"></i>
+                                <i class="fas fa-star drop-shadow-[0_0_5px_rgba(245,158,11,0.3)]"></i>
+                                <i class="far fa-star text-gray-600"></i>
                             </div>
                         </div>
                         <h3 class="font-bold text-2xl mb-3 text-white font-cyber tracking-wide">AWS CLOUD PRACTITIONER
@@ -1042,7 +1024,7 @@
                         <div class="flex items-center justify-between">
                             <span class="text-neon-green font-bold text-xl font-cyber">$39.99</span>
                             <button
-                                class="px-6 py-3 bg-neon-pink/10 border border-neon-pink text-neon-pink rounded-none hover:bg-neon-pink hover:text-black transition-all text-sm font-bold font-cyber tracking-wider btn-cyber">
+                                class="px-6 py-3 bg-neon-pink/10 border border-neon-pink text-neon-pink rounded-lg hover:bg-neon-pink hover:text-white transition-all text-sm font-bold font-cyber tracking-wider btn-cyber">
                                 ENROLL
                             </button>
                         </div>
@@ -1055,13 +1037,13 @@
     <!-- AI Assistant Chat -->
     <div id="chatContainer" class="fixed bottom-28 right-4 md:right-8 w-full max-w-md hidden z-50 animate-slide-up">
         <div
-            class="glass-panel rounded-none border border-neon-green/30 shadow-[0_0_40px_rgba(57,255,20,0.2)] overflow-hidden flex flex-col max-h-[700px] bg-dark-bg/95">
+            class="glass-panel rounded-xl border border-neon-green/30 shadow-[0_0_30px_rgba(16,185,129,0.1)] overflow-hidden flex flex-col max-h-[700px] bg-dark-bg/95">
             <!-- Chat Header -->
             <div
                 class="bg-gradient-to-r from-neon-green/10 to-neon-blue/10 p-6 border-b border-neon-green/30 flex justify-between items-center">
                 <div class="flex items-center gap-4">
                     <div
-                        class="w-12 h-12 rounded-none bg-neon-green/20 flex items-center justify-center border border-neon-green relative overflow-hidden">
+                        class="w-12 h-12 rounded-lg bg-neon-green/20 flex items-center justify-center border border-neon-green relative overflow-hidden">
                         <div class="absolute inset-0 bg-neon-green/20 animate-pulse"></div>
                         <i class="fas fa-robot text-neon-green text-2xl relative z-10"></i>
                     </div>
@@ -1069,7 +1051,7 @@
                         <h3 class="font-bold text-white font-cyber tracking-wider">CAREER AI COACH</h3>
                         <p class="text-xs text-neon-green flex items-center gap-2 font-cyber tracking-widest">
                             <span
-                                class="w-2 h-2 bg-neon-green rounded-full animate-pulse shadow-[0_0_10px_#39ff14]"></span>
+                                class="w-2 h-2 bg-neon-green rounded-full animate-pulse shadow-[0_0_10px_#10b981]"></span>
                             ONLINE
                         </p>
                     </div>
@@ -1084,11 +1066,11 @@
             <div id="chatMessages" class="flex-1 overflow-y-auto p-6 space-y-4 max-h-[400px] bg-dark-bg/50">
                 <div class="chat-message flex gap-4">
                     <div
-                        class="w-10 h-10 rounded-none bg-neon-green/20 flex items-center justify-center flex-shrink-0 border border-neon-green/50">
+                        class="w-10 h-10 rounded-lg bg-neon-green/20 flex items-center justify-center flex-shrink-0 border border-neon-green/50">
                         <i class="fas fa-robot text-neon-green"></i>
                     </div>
                     <div
-                        class="bg-dark-surface border border-neon-green/20 rounded-none rounded-tl-none p-4 max-w-[80%] shadow-[0_0_20px_rgba(57,255,20,0.1)]">
+                        class="bg-dark-surface border border-neon-green/20 rounded-lg rounded-tl-none p-4 max-w-[80%] shadow-[0_0_20px_rgba(16,185,129,0.05)]">
                         <p class="text-gray-300 text-sm leading-relaxed">Hello! I'm your AI Career Coach. I can help you
                             with:</p>
                         <ul class="text-gray-500 text-xs mt-3 space-y-2 list-disc list-inside">
@@ -1104,15 +1086,15 @@
             <!-- Quick Actions -->
             <div class="px-6 py-4 bg-dark-surface/80 border-t border-white/5 flex gap-3 overflow-x-auto">
                 <button onclick="sendQuickMessage('How do I improve my resume?')"
-                    class="whitespace-nowrap px-4 py-2 bg-neon-blue/10 border border-neon-blue/30 rounded-none text-xs text-neon-blue hover:bg-neon-blue/20 transition-all font-cyber tracking-wider hover:shadow-[0_0_10px_rgba(0,243,255,0.3)]">
+                    class="whitespace-nowrap px-4 py-2 bg-neon-blue/10 border border-neon-blue/30 rounded-md text-xs text-neon-blue hover:bg-neon-blue/20 transition-all font-cyber tracking-wider hover:shadow-[0_0_10px_rgba(59,130,246,0.2)]">
                     RESUME TIPS
                 </button>
                 <button onclick="sendQuickMessage('What skills are in demand?')"
-                    class="whitespace-nowrap px-4 py-2 bg-neon-pink/10 border border-neon-pink/30 rounded-none text-xs text-neon-pink hover:bg-neon-pink/20 transition-all font-cyber tracking-wider hover:shadow-[0_0_10px_rgba(255,0,255,0.3)]">
+                    class="whitespace-nowrap px-4 py-2 bg-neon-pink/10 border border-neon-pink/30 rounded-md text-xs text-neon-pink hover:bg-neon-pink/20 transition-all font-cyber tracking-wider hover:shadow-[0_0_10px_rgba(236,72,153,0.2)]">
                     TRENDING SKILLS
                 </button>
                 <button onclick="sendQuickMessage('Help me prepare for interviews')"
-                    class="whitespace-nowrap px-4 py-2 bg-neon-purple/10 border border-neon-purple/30 rounded-none text-xs text-neon-purple hover:bg-neon-purple/20 transition-all font-cyber tracking-wider hover:shadow-[0_0_10px_rgba(188,19,254,0.3)]">
+                    class="whitespace-nowrap px-4 py-2 bg-neon-purple/10 border border-neon-purple/30 rounded-md text-xs text-neon-purple hover:bg-neon-purple/20 transition-all font-cyber tracking-wider hover:shadow-[0_0_10px_rgba(139,92,246,0.2)]">
                     INTERVIEW PREP
                 </button>
             </div>
@@ -1121,10 +1103,10 @@
             <div class="p-6 bg-dark-surface border-t border-neon-green/20">
                 <div class="flex gap-3">
                     <input type="text" id="chatInput" placeholder="ENTER COMMAND..."
-                        class="flex-1 bg-dark-bg border border-white/10 rounded-none px-4 py-3 text-white placeholder-gray-600 focus:border-neon-green focus:outline-none focus:ring-1 focus:ring-neon-green transition-all font-cyber tracking-wider input-cyber"
+                        class="flex-1 bg-dark-bg border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:border-neon-green focus:outline-none focus:ring-1 focus:ring-neon-green transition-all font-cyber tracking-wider input-cyber"
                         onkeypress="handleChatKeypress(event)">
                     <button onclick="sendMessage()"
-                        class="px-6 py-3 bg-neon-green text-black rounded-none hover:bg-neon-green/80 transition-all font-bold shadow-[0_0_20px_rgba(57,255,20,0.3)] hover:shadow-[0_0_30px_rgba(57,255,20,0.5)]">
+                        class="px-6 py-3 bg-neon-green text-white rounded-lg hover:bg-neon-green/80 transition-all font-bold shadow-[0_0_15px_rgba(16,185,129,0.2)] hover:shadow-[0_0_25px_rgba(16,185,129,0.4)]">
                         <i class="fas fa-paper-plane"></i>
                     </button>
                 </div>
@@ -1134,7 +1116,7 @@
 
     <!-- Chat Toggle Button -->
     <button onclick="toggleChat()" id="chatToggle"
-        class="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-br from-neon-green to-neon-blue rounded-none shadow-[0_0_30px_rgba(57,255,20,0.4)] flex items-center justify-center text-black text-2xl hover:scale-110 transition-transform z-40 animate-glow border border-white/20">
+        class="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-br from-neon-green to-neon-blue rounded-full shadow-[0_0_20px_rgba(16,185,129,0.3)] flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform z-40 animate-glow border border-white/10">
         <i class="fas fa-comments"></i>
     </button>
 
@@ -1183,15 +1165,15 @@
                 <h4 class="font-bold text-white mb-6 font-cyber tracking-wider text-sm">CONNECT</h4>
                 <div class="flex gap-4">
                     <a href="#"
-                        class="w-12 h-12 rounded-none bg-dark-surface border border-white/10 flex items-center justify-center text-gray-600 hover:border-neon-blue hover:text-neon-blue transition-all hover:shadow-[0_0_15px_rgba(0,243,255,0.3)]">
+                        class="w-12 h-12 rounded-lg bg-dark-surface border border-white/10 flex items-center justify-center text-gray-600 hover:border-neon-blue hover:text-neon-blue transition-all hover:shadow-[0_0_15px_rgba(59,130,246,0.2)]">
                         <i class="fab fa-twitter"></i>
                     </a>
                     <a href="#"
-                        class="w-12 h-12 rounded-none bg-dark-surface border border-white/10 flex items-center justify-center text-gray-600 hover:border-neon-blue hover:text-neon-blue transition-all hover:shadow-[0_0_15px_rgba(0,243,255,0.3)]">
+                        class="w-12 h-12 rounded-lg bg-dark-surface border border-white/10 flex items-center justify-center text-gray-600 hover:border-neon-blue hover:text-neon-blue transition-all hover:shadow-[0_0_15px_rgba(59,130,246,0.2)]">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                     <a href="#"
-                        class="w-12 h-12 rounded-none bg-dark-surface border border-white/10 flex items-center justify-center text-gray-600 hover:border-neon-blue hover:text-neon-blue transition-all hover:shadow-[0_0_15px_rgba(0,243,255,0.3)]">
+                        class="w-12 h-12 rounded-lg bg-dark-surface border border-white/10 flex items-center justify-center text-gray-600 hover:border-neon-blue hover:text-neon-blue transition-all hover:shadow-[0_0_15px_rgba(59,130,246,0.2)]">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
@@ -1206,14 +1188,14 @@
     <div id="personalityModal"
         class="fixed inset-0 bg-black/90 z-[60] hidden flex items-center justify-center backdrop-blur-sm animate-fade-in">
         <div
-            class="glass-panel w-full max-w-2xl border border-neon-yellow/30 p-8 shadow-[0_0_40px_rgba(255,240,31,0.2)] relative">
+            class="glass-panel w-full max-w-2xl border border-neon-yellow/30 p-8 shadow-[0_0_30px_rgba(245,158,11,0.1)] relative rounded-xl">
             <h3 class="font-cyber text-2xl text-neon-yellow mb-6 text-center border-b border-white/10 pb-4">NEURAL
                 PERSONALITY ASSESSMENT</h3>
             <form id="personalityForm" class="space-y-6 max-h-[60vh] overflow-y-auto pr-4">
                 <div class="space-y-3">
                     <label class="block text-gray-300 font-cyber">1. WORK STYLE PREFERENCE</label>
                     <select name="q1"
-                        class="w-full bg-dark-bg border border-white/20 p-3 text-white focus:border-neon-yellow outline-none"
+                        class="w-full bg-dark-bg border border-white/20 p-3 text-white focus:border-neon-yellow outline-none rounded-md"
                         required>
                         <option value="">SELECT...</option>
                         <option value="Independent/Solo">Independent & Solo</option>
@@ -1224,7 +1206,7 @@
                 <div class="space-y-3">
                     <label class="block text-gray-300 font-cyber">2. PROBLEM SOLVING APPROACH</label>
                     <select name="q2"
-                        class="w-full bg-dark-bg border border-white/20 p-3 text-white focus:border-neon-yellow outline-none"
+                        class="w-full bg-dark-bg border border-white/20 p-3 text-white focus:border-neon-yellow outline-none rounded-md"
                         required>
                         <option value="">SELECT...</option>
                         <option value="Analytical/Data-Driven">Analytical & Data-Driven</option>
@@ -1235,7 +1217,7 @@
                 <div class="space-y-3">
                     <label class="block text-gray-300 font-cyber">3. COMMUNICATION STYLE</label>
                     <select name="q3"
-                        class="w-full bg-dark-bg border border-white/20 p-3 text-white focus:border-neon-yellow outline-none"
+                        class="w-full bg-dark-bg border border-white/20 p-3 text-white focus:border-neon-yellow outline-none rounded-md"
                         required>
                         <option value="">SELECT...</option>
                         <option value="Direct/Concise">Direct & Concise (Asynchronous)</option>
@@ -1246,7 +1228,7 @@
                 <div class="space-y-3">
                     <label class="block text-gray-300 font-cyber">4. PACE & ENVIRONMENT</label>
                     <select name="q4"
-                        class="w-full bg-dark-bg border border-white/20 p-3 text-white focus:border-neon-yellow outline-none"
+                        class="w-full bg-dark-bg border border-white/20 p-3 text-white focus:border-neon-yellow outline-none rounded-md"
                         required>
                         <option value="">SELECT...</option>
                         <option value="Fast-paced/Startup">Fast-Paced Startup</option>
@@ -1257,9 +1239,9 @@
 
                 <div class="flex gap-4 pt-6">
                     <button type="button" onclick="closePersonalityTest()"
-                        class="flex-1 py-3 border border-white/20 text-white hover:bg-white/5 font-cyber tracking-widest transition-all">CANCEL</button>
+                        class="flex-1 py-3 border border-white/20 text-white hover:bg-white/5 font-cyber tracking-widest transition-all rounded-md">CANCEL</button>
                     <button type="button" onclick="submitPersonalityTest()"
-                        class="flex-1 py-3 bg-neon-yellow text-black font-bold font-cyber tracking-widest hover:bg-neon-yellow/80 transition-all shadow-[0_0_15px_rgba(255,240,31,0.4)] relative">SYNC
+                        class="flex-1 py-3 bg-neon-yellow text-black font-bold font-cyber tracking-widest hover:bg-neon-yellow/80 transition-all shadow-[0_0_15px_rgba(245,158,11,0.2)] relative rounded-md">SYNC
                         TRAITS</button>
                 </div>
             </form>
@@ -1500,7 +1482,7 @@
                 if (existingRoadmap) existingRoadmap.remove();
 
                 const roadmapHtml = `
-                    <div id="dynamic-roadmap" class="bg-dark-surface border border-white/10 rounded-none p-8 mt-8 md:col-span-2 relative overflow-hidden group hover:border-neon-purple/50 transition-colors animate-fade-in">
+                    <div id="dynamic-roadmap" class="bg-dark-surface border border-white/10 rounded-xl p-8 mt-8 md:col-span-2 relative overflow-hidden group hover:border-neon-purple/50 transition-colors animate-fade-in">
                         <div class="absolute top-0 left-0 w-1 h-full bg-neon-purple"></div>
                         <h4 class="font-cyber text-xl font-bold mb-6 text-neon-purple flex items-center gap-3 tracking-wider">
                             <i class="fas fa-map-marked-alt"></i> 90-DAY ACCELERATION ROADMAP
@@ -1530,16 +1512,16 @@
                     const col = levelColors[c.level] || 'neon-blue';
                     const url = c.url || `https://www.google.com/search?q=${encodeURIComponent(c.title + ' ' + c.platform)}`;
                     return `
-                        <div class="bg-dark-bg border border-white/10 p-5 relative overflow-hidden group hover:border-${col}/50 transition-all hover:-translate-y-1 duration-300">
+                        <div class="bg-dark-bg border border-white/10 p-5 relative overflow-hidden group hover:border-${col}/50 transition-all hover:-translate-y-1 duration-300 rounded-lg">
                             <div class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-${col} to-transparent"></div>
                             <div class="flex justify-between items-start mb-3">
-                                <span class="text-xs font-bold text-${col} border border-${col}/30 px-2 py-0.5 font-cyber tracking-wider">${c.level}</span>
+                                <span class="text-xs font-bold text-${col} border border-${col}/30 px-2 py-0.5 font-cyber tracking-wider rounded">${c.level}</span>
                                 <span class="text-xs text-gray-600 font-cyber">${c.platform}</span>
                             </div>
                             <h5 class="font-bold text-white text-sm mb-2 font-cyber tracking-wide leading-snug">${c.title}</h5>
                             <p class="text-gray-600 text-xs mb-3 leading-relaxed">${c.reason || c.gap_addressed || ''}</p>
                             <a href="${url}" target="_blank" rel="noopener noreferrer"
-                                class="inline-flex items-center gap-2 px-4 py-2 border border-${col} text-${col} text-xs font-bold font-cyber tracking-wider hover:bg-${col} hover:text-black transition-all">
+                                class="inline-flex items-center gap-2 px-4 py-2 border border-${col} text-${col} text-xs font-bold font-cyber tracking-wider hover:bg-${col} hover:text-black transition-all rounded">
                                 <i class="fas fa-external-link-alt"></i> ENROLL
                             </a>
                         </div>`;
@@ -1624,10 +1606,10 @@
             const userMsg = document.createElement('div');
             userMsg.className = 'chat-message flex gap-3 justify-end';
             userMsg.innerHTML = `
-                <div class="bg-neon-blue/20 border border-neon-blue/40 rounded-none rounded-tr-none p-4 max-w-[80%] shadow-[0_0_20px_rgba(0,243,255,0.2)]">
+                <div class="bg-neon-blue/20 border border-neon-blue/40 rounded-lg rounded-tr-none p-4 max-w-[80%] shadow-[0_0_20px_rgba(0,243,255,0.2)]">
                     <p class="text-white text-sm font-cyber tracking-wide">${text}</p>
                 </div>
-                <div class="w-10 h-10 rounded-none bg-neon-blue/20 flex items-center justify-center flex-shrink-0 border border-neon-blue/50">
+                <div class="w-10 h-10 rounded-lg bg-neon-blue/20 flex items-center justify-center flex-shrink-0 border border-neon-blue/50">
                     <i class="fas fa-user text-neon-blue"></i>
                 </div>
             `;
@@ -1641,10 +1623,10 @@
                 typing.id = 'typingIndicator';
                 typing.className = 'chat-message flex gap-4';
                 typing.innerHTML = `
-                    <div class="w-10 h-10 rounded-none bg-neon-green/20 flex items-center justify-center flex-shrink-0 border border-neon-green/50">
+                    <div class="w-10 h-10 rounded-lg bg-neon-green/20 flex items-center justify-center flex-shrink-0 border border-neon-green/50">
                         <i class="fas fa-robot text-neon-green"></i>
                     </div>
-                    <div class="bg-dark-surface border border-neon-green/20 rounded-none rounded-tl-none p-4">
+                    <div class="bg-dark-surface border border-neon-green/20 rounded-lg rounded-tl-none p-4">
                         <div class="flex gap-2">
                             <span class="w-2 h-2 bg-neon-green rounded-full animate-typing shadow-[0_0_5px_#39ff14]"></span>
                             <span class="w-2 h-2 bg-neon-green rounded-full animate-typing shadow-[0_0_5px_#39ff14]" style="animation-delay: 0.2s"></span>
@@ -1668,10 +1650,10 @@
                     const aiMsg = document.createElement('div');
                     aiMsg.className = 'chat-message flex gap-4';
                     aiMsg.innerHTML = `
-                        <div class="w-10 h-10 rounded-none bg-neon-green/20 flex items-center justify-center flex-shrink-0 border border-neon-green/50">
+                        <div class="w-10 h-10 rounded-lg bg-neon-green/20 flex items-center justify-center flex-shrink-0 border border-neon-green/50">
                             <i class="fas fa-robot text-neon-green"></i>
                         </div>
-                        <div class="bg-dark-surface border border-neon-green/20 rounded-none rounded-tl-none p-4 max-w-[80%] shadow-[0_0_20px_rgba(57,255,20,0.1)]">
+                        <div class="bg-dark-surface border border-neon-green/20 rounded-lg rounded-tl-none p-4 max-w-[80%] shadow-[0_0_20px_rgba(16,185,129,0.05)]">
                             <p class="text-gray-300 text-sm leading-relaxed">${response.replace(/\n/g, '<br>')}</p>
                         </div>
                     `;
@@ -1694,10 +1676,10 @@
                 particle.style.left = Math.random() * 100 + 'vw';
                 particle.style.top = Math.random() * 100 + 'vh';
                 particle.style.animationDelay = Math.random() * 15 + 's';
-                particle.style.opacity = Math.random() * 0.6;
-                const c = ['#00f3ff', '#ff00ff', '#39ff14', '#bc13fe'][Math.floor(Math.random() * 4)];
+                particle.style.opacity = Math.random() * 0.4;
+                const c = ['#3b82f6', '#ec4899', '#10b981', '#8b5cf6'][Math.floor(Math.random() * 4)];
                 particle.style.background = c;
-                particle.style.boxShadow = `0 0 10px ${c}`;
+                particle.style.boxShadow = `0 0 8px ${c}`;
                 container.appendChild(particle);
             }
         }
@@ -1737,8 +1719,8 @@
             const list = document.getElementById('historyList');
             const countEl = document.getElementById('historyCount');
             list.innerHTML = `
-                <div class="h-24 bg-dark-surface border border-white/5 animate-pulse rounded-none"></div>
-                <div class="h-24 bg-dark-surface border border-white/5 animate-pulse rounded-none" style="animation-delay:.15s"></div>`;
+                <div class="h-24 bg-dark-surface border border-white/5 animate-pulse rounded-xl"></div>
+                <div class="h-24 bg-dark-surface border border-white/5 animate-pulse rounded-xl" style="animation-delay:.15s"></div>`;
 
             try {
                 const resp = await fetch('/api/history');
@@ -1772,11 +1754,11 @@
                         hour: '2-digit', minute: '2-digit'
                     });
                     return `
-                        <div class="history-card holo-card bg-dark-surface border border-white/10 p-6 fade-in-up"
+                        <div class="history-card holo-card bg-dark-surface border border-white/10 p-6 fade-in-up rounded-xl"
                              style="animation-delay:${idx * 0.08}s">
                             <div class="flex flex-col md:flex-row md:items-center gap-4">
                                 <!-- Score badge -->
-                                <div class="score-badge flex-shrink-0 w-20 h-20 rounded-none flex flex-col items-center justify-center border-2"
+                                <div class="score-badge flex-shrink-0 w-20 h-20 rounded-lg flex flex-col items-center justify-center border-2"
                                      style="border-color:${scoreColor};box-shadow:0 0 15px ${scoreColor}22">
                                     <span class="stat-number text-2xl font-black" style="color:${scoreColor}">${score}%</span>
                                     <span class="text-gray-700 text-xs font-cyber" style="font-size:0.5rem;letter-spacing:.1em">SCORE</span>
@@ -1785,7 +1767,7 @@
                                 <!-- Details -->
                                 <div class="flex-1 timeline-connector">
                                     <div class="flex flex-wrap gap-3 items-center mb-2">
-                                        <span class="text-xs font-bold text-${tc} border border-${tc}/30 px-2 py-0.5 font-cyber tracking-wider uppercase">${item.job_role || 'GENERAL'}</span>
+                                        <span class="text-xs font-bold text-${tc} border border-${tc}/30 px-2 py-0.5 font-cyber tracking-wider uppercase rounded">${item.job_role || 'GENERAL'}</span>
                                         <span class="text-gray-700 text-xs font-cyber">${date}</span>
                                         ${item.github_url ? `<span class="text-gray-700 text-xs"><i class="fab fa-github mr-1"></i>${item.github_url.replace('https://github.com/','')}</span>` : ''}
                                         ${item.resume_filename ? `<span class="text-gray-700 text-xs"><i class="fas fa-file-alt mr-1 text-neon-green"></i>${item.resume_filename}</span>` : ''}
@@ -1798,15 +1780,15 @@
                                 <!-- Actions -->
                                 <div class="flex gap-2 flex-shrink-0">
                                     <button onclick="loadHistoryDetail(${item.id})"
-                                        class="px-3 py-2 border border-neon-blue/40 text-neon-blue text-xs font-cyber hover:bg-neon-blue hover:text-black transition-all flex items-center gap-1">
+                                        class="px-3 py-2 border border-neon-blue/40 text-neon-blue text-xs font-cyber hover:bg-neon-blue hover:text-white transition-all flex items-center gap-1 rounded">
                                         <i class="fas fa-eye"></i> VIEW
                                     </button>
                                     <button onclick="downloadHistoryPDF(${item.id})"
-                                        class="px-3 py-2 border border-neon-purple/40 text-neon-purple text-xs font-cyber hover:bg-neon-purple hover:text-black transition-all flex items-center gap-1">
+                                        class="px-3 py-2 border border-neon-purple/40 text-neon-purple text-xs font-cyber hover:bg-neon-purple hover:text-white transition-all flex items-center gap-1 rounded">
                                         <i class="fas fa-file-pdf"></i> PDF
                                     </button>
                                     <button onclick="deleteHistoryItem(${item.id}, this)"
-                                        class="px-3 py-2 border border-neon-pink/30 text-neon-pink/60 text-xs font-cyber hover:bg-neon-pink hover:text-black transition-all flex items-center gap-1">
+                                        class="px-3 py-2 border border-neon-pink/30 text-neon-pink/60 text-xs font-cyber hover:bg-neon-pink hover:text-white transition-all flex items-center gap-1 rounded">
                                         <i class="fas fa-trash"></i>
                                     </button>
                                 </div>
